@@ -1,0 +1,12 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../images/Academy-Weather\ forecast-Bg-buttom.png) bottom left 0, #373af5 url(../../images/Academy-Weather\ forecast-Bg-up.png) top right 0; 
+  background-size: contain;
+  background-repeat: no-repeat; 
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  color: #fff;
+  box-sizing: border-box;
+  padding-top: 1px;
+}
