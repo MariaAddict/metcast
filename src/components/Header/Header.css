@@ -7,7 +7,7 @@
 .header__title {
   font-weight: bold;
   font-size: 102px;
-  line-height: 122px;
+  line-height: 1.1;
   margin: 0;
   padding: 0;
 }
@@ -15,4 +15,33 @@
 .header__title-part {
   margin: 0;
   padding: 0 0 0 369px;
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    max-width: 530px;
+  }
+
+  .header__title {
+    font-size: 70px;
+  }
+
+  .header__title-part {
+    padding-left: 250px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header {
+    max-width: 243px;
+  }
+
+  .header__title {
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  .header__title-part {
+    padding-left: 115px;
+  }
 }
