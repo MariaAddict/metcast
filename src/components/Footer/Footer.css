@@ -1,0 +1,28 @@
+.footer {
+  width: 100vw;
+  margin: 199px auto 16px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.footer__discription {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.29;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1280px) {
+    .footer {
+        margin-top: 46px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .footer {
+        margin-top: 78px;
+    }
+}
