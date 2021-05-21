@@ -1,8 +1,7 @@
 .main {
-  width: calc(100% - 10px);
-  height: 100%;
+  width: calc(100% - 20px);
   display: flex;
-  margin: 0 5px;
+  margin: 0 10px;
   justify-content: center;
   box-sizing: border-box;
 }

@@ -18,3 +18,9 @@
   margin: 24px 0 20px;
   padding: 0;
 }
+
+@media screen and (max-width: 540px) {
+  .info__description {
+    margin-bottom: 3px;
+  }
+}

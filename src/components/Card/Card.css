@@ -33,3 +33,18 @@
   padding: 0;
   text-align: end;
 }
+
+@media screen and (max-width: 540px) {
+    .cards__item {
+        min-width: 174px;
+        margin-right: 16px;
+    }
+
+    .card-list-block__button {
+        display: none;
+    }
+
+    .cards__item:last-of-type {
+        margin-right: 24px;
+    }
+}

@@ -43,6 +43,7 @@
 
 .forecast__input:nth-child(2) {
   margin-left: 40px;
+  margin-right: 58px;
 }
 
 .forecast__select-item {
@@ -59,5 +60,35 @@
 
   .forecast:last-of-type {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .forecast {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .forecast {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 60px;
+  }
+
+  .forecast__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forecast__input {
+    margin: 0;
+  }
+
+  .forecast__input:nth-child(2) {
+    margin: 24px 0 0;
   }
 }
