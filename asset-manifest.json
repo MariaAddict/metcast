@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9b78c530.chunk.css",
+    "main.js": "/static/js/main.7c339d54.chunk.js",
+    "main.js.map": "/static/js/main.7c339d54.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2ee433b4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2ee433b4.js.map",
+    "static/js/2.1e51b1b8.chunk.js": "/static/js/2.1e51b1b8.chunk.js",
+    "static/js/2.1e51b1b8.chunk.js.map": "/static/js/2.1e51b1b8.chunk.js.map",
+    "static/js/3.bccb29eb.chunk.js": "/static/js/3.bccb29eb.chunk.js",
+    "static/js/3.bccb29eb.chunk.js.map": "/static/js/3.bccb29eb.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.9b78c530.chunk.css.map": "/static/css/main.9b78c530.chunk.css.map",
+    "static/js/2.1e51b1b8.chunk.js.LICENSE.txt": "/static/js/2.1e51b1b8.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/Academy-Weather forecast-Bg-up.1b9e0722.png",
+    "static/media/Academy-Weather-bg160.1a743710.svg": "/static/media/Academy-Weather-bg160.1a743710.svg",
+    "static/media/index.css": "/static/media/Ubuntu-Medium.f6a60e5b.ttf",
+    "static/media/CardList.css": "/static/media/chevron-left.668da982.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2ee433b4.js",
+    "static/js/2.1e51b1b8.chunk.js",
+    "static/css/main.9b78c530.chunk.css",
+    "static/js/main.7c339d54.chunk.js"
+  ]
+}
