@@ -5,12 +5,13 @@ import { Cards } from "../../types";
 type MainProps = {
   cardsSevenDays: Cards;
   cardDayInPast: Cards;
-  getWeatherForecastOnSevenDays(city: string): Cards;
+  getWeatherForecastOnSevenDays(city: string): void;
   handleButtonRight(): void;
   handleButtonLeft(): void;
   numberOfInitalCard: number;
   isLeftButtonEnabled: boolean;
   isRightButtonEnabled: boolean;
+  getHistoricalWeatherData(city: string, date: number): void;
 };
 
 function Main(props: MainProps) {
@@ -26,7 +27,11 @@ function Main(props: MainProps) {
         isLeftButtonEnabled={props.isLeftButtonEnabled}
         isRightButtonEnabled={props.isRightButtonEnabled}
       />
-      <SearchForecast forecast="day" cards={props.cardDayInPast} />
+      <SearchForecast
+        forecast="day"
+        cards={props.cardDayInPast}
+        getHistoricalWeatherData={props.getHistoricalWeatherData}
+      />
     </main>
   );
 }

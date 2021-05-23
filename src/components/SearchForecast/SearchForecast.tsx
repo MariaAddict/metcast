@@ -1,5 +1,5 @@
 import "./SearchForecast.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import InfoBlock from "../InfoBlock/InfoBlock";
 import CardList from "../CardList/CardList";
 import { Cards } from "../../types";
@@ -13,6 +13,7 @@ interface SearchForecastProps {
   numberOfInitalCard?: number;
   isLeftButtonEnabled?: boolean;
   isRightButtonEnabled?: boolean;
+  getHistoricalWeatherData?(city: string, date: number): void;
 }
 
 function SearchForecast(props: SearchForecastProps) {
@@ -37,7 +38,17 @@ function SearchForecast(props: SearchForecastProps) {
       if (props.forecast === "7days" && city !== "") {
         props.getWeatherForecastOnSevenDays!(city);
       } else if (city !== "" && date !== "") {
-        console.log(props.forecast);
+        const newDate = new Date(date);
+        const dateInThePast =
+          Date.UTC(
+            newDate.getUTCFullYear(),
+            newDate.getUTCMonth(),
+            newDate.getUTCDate(),
+            newDate.getUTCHours(),
+            newDate.getUTCMinutes(),
+            newDate.getUTCSeconds()
+          ) / 1000;
+        props.getHistoricalWeatherData!(city, dateInThePast);
       }
     }
   }

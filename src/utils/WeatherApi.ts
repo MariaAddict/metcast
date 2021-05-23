@@ -34,6 +34,13 @@ class WeatherApi {
         })
             .then(handleResponse)
     }
+
+    getWeatherForecastOnDateinThePast(coordinates: Coordinates, date: number) {
+        return fetch(`${this._url}/timemachine?lat=${coordinates.lat}&lon=${coordinates.lon}&dt=${date}&units=metric&appid=${apiKey}`, {
+            method: 'GET',
+        })
+            .then(handleResponse)
+    }
 }
 
 const apiWeather = new WeatherApi(BASE_URL, {
@@ -44,5 +51,3 @@ const apiWeather = new WeatherApi(BASE_URL, {
 });
 
 export default apiWeather;
-
-//${this._url}?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&exclude=minutely,hourly,daily,alerts&appid=${apiKey}

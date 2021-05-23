@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./CardList.css";
 import Card from "../Card/Card";
 import { Cards } from "../../types";
@@ -31,7 +30,7 @@ function CardList(props: CardListProps) {
           .map((card, i) => (
             <Card key={i} card={card} forecast={props.forecast} />
           ))
-          .slice(props.numberOfInitalCard, props.numberOfInitalCard! + 3)}
+          .slice(props.numberOfInitalCard, props.forecast==='day' ? 1 : props.numberOfInitalCard! + 3)}
       </ul>
       {props.forecast === "7days" && (
         <button

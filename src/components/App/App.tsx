@@ -56,6 +56,24 @@ function App() {
     return cordinates!;
   };
 
+  const optionsData: any = {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  };
+
+  function createCard(date: number, temperature: number, iconUrl: string): CardItem {
+    const dateCard: string = new Date(date * 1000)
+      .toLocaleDateString("en-GB", optionsData)
+      .toLowerCase();
+    const newCardItem: CardItem = {
+      date: dateCard,
+      temperature: Math.round(temperature),
+      iconUrl: `http://openweathermap.org/img/wn/${iconUrl}@2x.png`,
+    };
+    return newCardItem;
+  }
+
   function getWeatherForecastOnSevenDays(city: string): any {
     console.log("city in big App:", city);
 
@@ -64,29 +82,29 @@ function App() {
     apiWeather
       .getWeatherForecastOnSevenDays(cordinatesCity)
       .then((data: any): void => {
-        console.log("data", data);
-        const options: any = {
-          day: "numeric",
-          month: "short",
-          year: "numeric",
-        };
-
         const newCards: Cards = data.daily.map((item: any) => {
-          const dateCard: string = new Date(item.dt * 1000)
-            .toLocaleDateString("en-GB", options)
-            .toLowerCase();
-          const newCardItem: CardItem = {
-            date: dateCard,
-            temperature: Math.round(item.temp.day),
-            iconUrl: `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`,
-          };
-          return newCardItem;
+          return createCard(item.dt, item.temp.day, item.weather[0].icon);
         });
 
         setCardsSevenDays(newCards);
         setNumberOfInitalCard(0);
         setIsRightButtonEnabled(true);
         setIsLeftButtonEnabled(false);
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  }
+
+  function getHistoricalWeatherData(city: string, date: number) {
+    const coordinatesCity: Coordinates = getCoordinates(city);
+
+    apiWeather
+      .getWeatherForecastOnDateinThePast(coordinatesCity, date)
+      .then((data) => {
+        const newCard: CardItem = createCard(data.current.dt, data.current.temp, data.current.weather[0].icon);
+        setCardDayInPast([newCard, ...cardDayInPast]);
+        setNumberOfInitalCard(0);
       })
       .catch((err: any) => {
         console.log(err);
@@ -132,6 +150,7 @@ function App() {
         numberOfInitalCard={numberOfInitalCard}
         isLeftButtonEnabled={isLeftButtonEnabled}
         isRightButtonEnabled={isRightButtonEnabled}
+        getHistoricalWeatherData={getHistoricalWeatherData}
       />
       <Footer />
     </div>
