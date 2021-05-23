@@ -1,12 +1,14 @@
-type Cards = Array<{
+type CardItem = {
     date: string,
     temperature: number,
-    icon: any,
-}>
+    iconUrl: string,
+}
+
+type Cards = Array<CardItem>
 
 type Coordinates = {
     lat: number,
     lon: number,
 }
 
-export type { Cards, Coordinates};
+export type { CardItem, Cards, Coordinates};
