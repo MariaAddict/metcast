@@ -16,6 +16,10 @@
     border: none;
 }
 
+.card-list-block__button_disabled {
+    opacity: 0.4;
+}
+
 .card-list-block__button_direction_left {
     background-image: url(../../images/chevron-left.svg);
 }
