@@ -2,16 +2,11 @@ import './SearchForecast.css';
 import React, { useState, useEffect } from 'react';
 import InfoBlock from '../InfoBlock/InfoBlock';
 import CardList from '../CardList/CardList';
-import image from '../../images/Academy-Weather-bg160.svg'
-
-type CardListProps = Array<{
-    date: string,
-    temperature: number,
-    icon: any,
-}>
+import image from '../../images/Academy-Weather-bg160.svg';
+import {Cards} from '../../types';
 
 
-const cards: CardListProps = [{
+const cards: Cards = [{
     date: '2021-05-27',
     temperature: 23,
     icon: image,
@@ -36,6 +31,7 @@ const cards: CardListProps = [{
 
 interface SearchForecastProps {
     forecast: string,
+    getWeatherForecastOnSevenDays?(city: string): any,
 }
 
 function SearchForecast(this: any, props: SearchForecastProps) {
@@ -63,10 +59,10 @@ function SearchForecast(this: any, props: SearchForecastProps) {
         } else  if (props.forecast === '7days' && city !== '') {
             // e.preventDefault();
             // form.current!.submit();
-            //ф-ция вызывающая api
-            console.log(city);
+            props.getWeatherForecastOnSevenDays!(city);
+            
         }
-    }, [city, date, form, props.forecast]);
+    }, [city, date, form, props.forecast, props.getWeatherForecastOnSevenDays]);
 
     // const onFocus = () => {
     //     this.type="date";

@@ -1,12 +1,9 @@
 import './CardList.css';
 import Card from '../Card/Card';
+import {Cards} from '../../types';
 
 interface CardListProps {
-    cards: Array<{
-        date: string,
-        temperature: number,
-        icon: any,
-    }>,
+    cards: Cards,
     forecast: string,
 }
 
