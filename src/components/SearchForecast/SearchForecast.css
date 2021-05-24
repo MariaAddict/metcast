@@ -46,8 +46,17 @@
   margin-right: 58px;
 }
 
+.forecast__input:hover {
+  cursor: pointer;
+}
+
+.forecast__input:focus {
+  border: 2px solid rgba(55, 58, 245, 1);
+}
+
 .forecast__select-item {
     color: #2C2D76;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1280px) {
