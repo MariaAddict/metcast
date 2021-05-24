@@ -13,6 +13,9 @@ interface CardListProps {
 }
 
 function CardList(props: CardListProps) {
+
+  let currentWidth: any = window.innerWidth;
+
   return (
     <div className="card-list-block">
       {props.forecast === "7days" && (
@@ -30,7 +33,7 @@ function CardList(props: CardListProps) {
           .map((card, i) => (
             <Card key={i} card={card} forecast={props.forecast} />
           ))
-          .slice(props.numberOfInitalCard, props.forecast==='day' ? 1 : props.numberOfInitalCard! + 3)}
+          .slice(props.numberOfInitalCard, props.forecast==='day' ? 1 : currentWidth <= 540 ? props.cards.length : props.numberOfInitalCard! + 3)}
       </ul>
       {props.forecast === "7days" && (
         <button
