@@ -14,6 +14,10 @@ function App() {
     useState<boolean>(true);
   const [isLeftButtonEnabled, setIsLeftButtonEnabled] =
     useState<boolean>(false);
+  const [isFormSevenDaysSubmited, setIsFormSevenDaysSubmited] =
+    useState<boolean>(false);
+  const [isFormHistoryDaySubmited, setIsFormHistoryDaySubmited] =
+    useState<boolean>(false);
 
   const getCoordinates = (city: string): Coordinates => {
     let cordinates: Coordinates;
@@ -62,7 +66,11 @@ function App() {
     year: "numeric",
   };
 
-  function createCard(date: number, temperature: number, iconUrl: string): CardItem {
+  function createCard(
+    date: number,
+    temperature: number,
+    iconUrl: string
+  ): CardItem {
     const dateCard: string = new Date(date * 1000)
       .toLocaleDateString("en-GB", optionsData)
       .toLowerCase();
@@ -75,13 +83,14 @@ function App() {
   }
 
   function getWeatherForecastOnSevenDays(city: string): any {
-    console.log("city in big App:", city);
-
     const cordinatesCity: Coordinates = getCoordinates(city);
+
+    setIsFormSevenDaysSubmited(false);
 
     apiWeather
       .getWeatherForecastOnSevenDays(cordinatesCity)
       .then((data: any): void => {
+        setIsFormSevenDaysSubmited(true);
         const newCards: Cards = data.daily.map((item: any) => {
           return createCard(item.dt, item.temp.day, item.weather[0].icon);
         });
@@ -99,10 +108,17 @@ function App() {
   function getHistoricalWeatherData(city: string, date: number) {
     const coordinatesCity: Coordinates = getCoordinates(city);
 
+    setIsFormHistoryDaySubmited(false);
+
     apiWeather
       .getWeatherForecastOnDateinThePast(coordinatesCity, date)
       .then((data) => {
-        const newCard: CardItem = createCard(data.current.dt, data.current.temp, data.current.weather[0].icon);
+        setIsFormHistoryDaySubmited(true);
+        const newCard: CardItem = createCard(
+          data.current.dt,
+          data.current.temp,
+          data.current.weather[0].icon
+        );
         setCardDayInPast([newCard, ...cardDayInPast]);
         setNumberOfInitalCard(0);
       })
@@ -151,6 +167,8 @@ function App() {
         isLeftButtonEnabled={isLeftButtonEnabled}
         isRightButtonEnabled={isRightButtonEnabled}
         getHistoricalWeatherData={getHistoricalWeatherData}
+        isFormSevenDaysSubmited={isFormSevenDaysSubmited}
+        isFormHistoryDaySubmited={isFormHistoryDaySubmited}
       />
       <Footer />
     </div>

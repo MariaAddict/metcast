@@ -14,6 +14,8 @@ interface SearchForecastProps {
   isLeftButtonEnabled?: boolean;
   isRightButtonEnabled?: boolean;
   getHistoricalWeatherData?(city: string, date: number): void;
+  isFormSevenDaysSubmited?: boolean;
+  isFormHistoryDaySubmited?: boolean;
 }
 
 function SearchForecast(props: SearchForecastProps) {
@@ -55,14 +57,10 @@ function SearchForecast(props: SearchForecastProps) {
 
   // useEffect(():void => {
   //     if (city !== '' && date !== '' && form !== null) {
-  //         // e.preventDefault();
-  //         // form.current!.submit();
   //         //ф-ция вызывающая api
   //         console.log(city, date);
   //     } else  if (forecast === '7days' && city !== '') {
-  //         // e.preventDefault();
-  //         // form.current!.submit();
-
+  //ф-ция вызывающая api
   //     }
   // }, [city, date, form, forecast]);
 
@@ -107,16 +105,22 @@ function SearchForecast(props: SearchForecastProps) {
           ></input>
         )}
       </form>
-      {/* <InfoBlock /> */}
-      <CardList
-        cards={props.cards}
-        forecast={props.forecast}
-        handleButtonRight={props.handleButtonRight}
-        handleButtonLeft={props.handleButtonLeft}
-        numberOfInitalCard={props.numberOfInitalCard}
-        isLeftButtonEnabled={props.isLeftButtonEnabled}
-        isRightButtonEnabled={props.isRightButtonEnabled}
-      />
+      {((props.forecast === "7days" && !props.isFormSevenDaysSubmited) ||
+        (props.forecast === "day" && !props.isFormHistoryDaySubmited)) && (
+        <InfoBlock />
+      )}
+      {((props.forecast === "7days" && props.isFormSevenDaysSubmited) ||
+        (props.forecast === "day" && props.isFormHistoryDaySubmited)) && (
+        <CardList
+          cards={props.cards}
+          forecast={props.forecast}
+          handleButtonRight={props.handleButtonRight}
+          handleButtonLeft={props.handleButtonLeft}
+          numberOfInitalCard={props.numberOfInitalCard}
+          isLeftButtonEnabled={props.isLeftButtonEnabled}
+          isRightButtonEnabled={props.isRightButtonEnabled}
+        />
+      )}
     </div>
   );
 }

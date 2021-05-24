@@ -12,6 +12,8 @@ type MainProps = {
   isLeftButtonEnabled: boolean;
   isRightButtonEnabled: boolean;
   getHistoricalWeatherData(city: string, date: number): void;
+  isFormSevenDaysSubmited: boolean;
+  isFormHistoryDaySubmited: boolean;
 };
 
 function Main(props: MainProps) {
@@ -26,11 +28,13 @@ function Main(props: MainProps) {
         numberOfInitalCard={props.numberOfInitalCard}
         isLeftButtonEnabled={props.isLeftButtonEnabled}
         isRightButtonEnabled={props.isRightButtonEnabled}
+        isFormSevenDaysSubmited={props.isFormSevenDaysSubmited}
       />
       <SearchForecast
         forecast="day"
         cards={props.cardDayInPast}
         getHistoricalWeatherData={props.getHistoricalWeatherData}
+        isFormHistoryDaySubmited={props.isFormHistoryDaySubmited}
       />
     </main>
   );
