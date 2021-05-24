@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/metcast/static/css/main.eb652b70.chunk.css",
-    "main.js": "/metcast/static/js/main.3bb34847.chunk.js",
-    "main.js.map": "/metcast/static/js/main.3bb34847.chunk.js.map",
-    "runtime-main.js": "/metcast/static/js/runtime-main.66c7342f.js",
-    "runtime-main.js.map": "/metcast/static/js/runtime-main.66c7342f.js.map",
-    "static/js/2.954b619a.chunk.js": "/metcast/static/js/2.954b619a.chunk.js",
-    "static/js/2.954b619a.chunk.js.map": "/metcast/static/js/2.954b619a.chunk.js.map",
-    "static/js/3.a7db2f4b.chunk.js": "/metcast/static/js/3.a7db2f4b.chunk.js",
-    "static/js/3.a7db2f4b.chunk.js.map": "/metcast/static/js/3.a7db2f4b.chunk.js.map",
+    "main.css": "/metcast/static/css/main.97796355.chunk.css",
+    "main.js": "/metcast/static/js/main.660a9d5b.chunk.js",
+    "main.js.map": "/metcast/static/js/main.660a9d5b.chunk.js.map",
+    "runtime-main.js": "/metcast/static/js/runtime-main.3249ef6e.js",
+    "runtime-main.js.map": "/metcast/static/js/runtime-main.3249ef6e.js.map",
+    "static/js/2.08db0d08.chunk.js": "/metcast/static/js/2.08db0d08.chunk.js",
+    "static/js/2.08db0d08.chunk.js.map": "/metcast/static/js/2.08db0d08.chunk.js.map",
+    "static/js/3.5701672a.chunk.js": "/metcast/static/js/3.5701672a.chunk.js",
+    "static/js/3.5701672a.chunk.js.map": "/metcast/static/js/3.5701672a.chunk.js.map",
     "index.html": "/metcast/index.html",
-    "static/css/main.eb652b70.chunk.css.map": "/metcast/static/css/main.eb652b70.chunk.css.map",
-    "static/js/2.954b619a.chunk.js.LICENSE.txt": "/metcast/static/js/2.954b619a.chunk.js.LICENSE.txt",
+    "static/css/main.97796355.chunk.css.map": "/metcast/static/css/main.97796355.chunk.css.map",
+    "static/js/2.08db0d08.chunk.js.LICENSE.txt": "/metcast/static/js/2.08db0d08.chunk.js.LICENSE.txt",
     "static/media/App.css": "/metcast/static/media/Academy-Weather forecast-Bg-up.1b9e0722.png",
     "static/media/Academy-Weather-bg160.1a743710.svg": "/metcast/static/media/Academy-Weather-bg160.1a743710.svg",
     "static/media/index.css": "/metcast/static/media/Ubuntu-Medium.f6a60e5b.ttf",
     "static/media/CardList.css": "/metcast/static/media/chevron-left.668da982.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.66c7342f.js",
-    "static/js/2.954b619a.chunk.js",
-    "static/css/main.eb652b70.chunk.css",
-    "static/js/main.3bb34847.chunk.js"
+    "static/js/runtime-main.3249ef6e.js",
+    "static/js/2.08db0d08.chunk.js",
+    "static/css/main.97796355.chunk.css",
+    "static/js/main.660a9d5b.chunk.js"
   ]
 }
