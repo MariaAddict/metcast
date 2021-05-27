@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/metcast/static/css/main.97796355.chunk.css",
+    "main.css": "/metcast/static/css/main.6089feae.chunk.css",
     "main.js": "/metcast/static/js/main.660a9d5b.chunk.js",
     "main.js.map": "/metcast/static/js/main.660a9d5b.chunk.js.map",
     "runtime-main.js": "/metcast/static/js/runtime-main.3249ef6e.js",
@@ -10,7 +10,7 @@
     "static/js/3.5701672a.chunk.js": "/metcast/static/js/3.5701672a.chunk.js",
     "static/js/3.5701672a.chunk.js.map": "/metcast/static/js/3.5701672a.chunk.js.map",
     "index.html": "/metcast/index.html",
-    "static/css/main.97796355.chunk.css.map": "/metcast/static/css/main.97796355.chunk.css.map",
+    "static/css/main.6089feae.chunk.css.map": "/metcast/static/css/main.6089feae.chunk.css.map",
     "static/js/2.08db0d08.chunk.js.LICENSE.txt": "/metcast/static/js/2.08db0d08.chunk.js.LICENSE.txt",
     "static/media/App.css": "/metcast/static/media/Academy-Weather forecast-Bg-up.1b9e0722.png",
     "static/media/Academy-Weather-bg160.1a743710.svg": "/metcast/static/media/Academy-Weather-bg160.1a743710.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.3249ef6e.js",
     "static/js/2.08db0d08.chunk.js",
-    "static/css/main.97796355.chunk.css",
+    "static/css/main.6089feae.chunk.css",
     "static/js/main.660a9d5b.chunk.js"
   ]
 }
