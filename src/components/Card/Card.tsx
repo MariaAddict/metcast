@@ -1,3 +1,4 @@
+import {useMemo} from 'react';
 import './Card.css';
 import { CardItem } from '../../types';
 
@@ -8,14 +9,15 @@ interface CardProps {
 }
 
 function Card(props: CardProps) {
-    let temperatureCard: string;
-    if (props.card.temperature > 0) {
-        temperatureCard = "+" + props.card.temperature;
-    } else  if (props.card.temperature < 0) {
-        temperatureCard = "-" + props.card.temperature;
-    } else {
-        temperatureCard = String(props.card.temperature);
-    }
+    const temperatureCard: string = useMemo(() => {
+        if (props.card.temperature > 0) {
+            return "+" + props.card.temperature;
+        } else  if (props.card.temperature < 0) {
+            return "-" + props.card.temperature;
+        } else {
+            return String(props.card.temperature);
+        }
+    }, [props.card]);
     
     return (
         <li className="cards__item" style={ {backgroundImage: `url(${props.card.iconUrl})`, backgroundSize: props.forecast === '7days' ? '120px 120px' : '160px 160px'}}>
