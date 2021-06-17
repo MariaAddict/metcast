@@ -55,18 +55,10 @@ function SearchForecast(props: SearchForecastProps) {
     }
   }
 
-  // useEffect(():void => {
-  //     if (city !== '' && date !== '' && form !== null) {
-  //         //ф-ция вызывающая api
-  //         console.log(city, date);
-  //     } else  if (forecast === '7days' && city !== '') {
-  //ф-ция вызывающая api
-  //     }
-  // }, [city, date, form, forecast]);
+  function onChange(e: any): void{
+    console.log("event: ", e.target.value);
+  }
 
-  // const onFocus = () => {
-  //     this.type="date";
-  // }
 
   return (
     <div className="forecast">
@@ -80,11 +72,14 @@ function SearchForecast(props: SearchForecastProps) {
         className="forecast__form"
         name={props.forecast}
         onKeyPress={handleKeyEnter}
+        onChange = {onChange}
       >
         <select
           className="forecast__input"
           required
           onChange={handleChangeSelect}
+          value={city}
+          name="city"
         >
           <option hidden disabled selected>
             Select city
@@ -102,6 +97,8 @@ function SearchForecast(props: SearchForecastProps) {
             placeholder="Select date"
             required
             onChange={handleChangeDate}
+            value={date}
+            name="date"
           ></input>
         )}
       </form>
