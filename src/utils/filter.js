@@ -1,4 +1,18 @@
 // filter<T>(predicate: (element: T) => boolean, collection: T[]): T[]
+/** 
+ * @template T
+ * */
+/** 
+ *The function returns a new array without an element that did not pass validation in the callback. Callback сhecks the element if it meets the conditions and returns a boolean value
+ * @callback callbackFilter 
+ * @param {T} element - item
+ * @returns {boolean} - Сhecked item status
+ */
+ /**
+ * @param {callbackFilter}callback  - A callback to run.
+ * @param {T[]} array  - Inital array
+ * @returns {T[]} - New array without an item that did not pass validation in the callback
+ */
 const filter = (callback, array) => {
     return array.reduce((acc, currentVal) => {
         let isFiltered = callback(currentVal);
