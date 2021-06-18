@@ -66,14 +66,18 @@ function App() {
     year: "numeric",
   };
 
+  function changeDateFormat(date: number): string {
+    return new Date(date * 1000)
+      .toLocaleDateString("en-GB", optionsData)
+      .toLowerCase();
+  }
+
   function createCard(
     date: number,
     temperature: number,
     iconUrl: string
   ): CardItem {
-    const dateCard: string = new Date(date * 1000)
-      .toLocaleDateString("en-GB", optionsData)
-      .toLowerCase();
+    const dateCard: string = changeDateFormat(date);
     const newCardItem: CardItem = {
       date: dateCard,
       temperature: Math.round(temperature),
