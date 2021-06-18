@@ -8,8 +8,8 @@ interface SearchForecastProps {
   forecast: string;
   cards: Cards;
   getWeatherForecastOnSevenDays?(city: string): void;
-  handleButtonRight?(): void;
-  handleButtonLeft?(): void;
+  showNextCard?(): void;
+  showPreviousCard?(): void;
   numberOfInitalCard?: number;
   isLeftButtonEnabled?: boolean;
   isRightButtonEnabled?: boolean;
@@ -23,14 +23,14 @@ function SearchForecast(props: SearchForecastProps) {
   const [date, setDate] = useState<string>("");
   const form = React.createRef<HTMLFormElement>();
 
-  function handleChangeSelect(
+  function setValueSelect(
     event: React.ChangeEvent<HTMLSelectElement>
   ): void {
     setCity(event.target.value);
     console.log(event.target.value);
   }
 
-  function handleChangeDate(event: React.ChangeEvent<HTMLInputElement>): void {
+  function setValueDate(event: React.ChangeEvent<HTMLInputElement>): void {
     setDate(event.target.value);
     console.log(event.target.value);
   }
@@ -55,9 +55,9 @@ function SearchForecast(props: SearchForecastProps) {
     }
   }
 
-  function onChange(e: any): void{
-    console.log("event: ", e.target.value);
-  }
+  // function onChange(e: any): void{
+  //   console.log("event: ", e.target.value);
+  // }
 
 
   return (
@@ -72,12 +72,12 @@ function SearchForecast(props: SearchForecastProps) {
         className="forecast__form"
         name={props.forecast}
         onKeyPress={handleKeyEnter}
-        onChange = {onChange}
+        // onChange = {onChange}
       >
         <select
           className="forecast__input"
           required
-          onChange={handleChangeSelect}
+          onChange={setValueSelect}
           value={city}
           name="city"
         >
@@ -96,7 +96,7 @@ function SearchForecast(props: SearchForecastProps) {
             className="forecast__input forecast__input_type_data"
             placeholder="Select date"
             required
-            onChange={handleChangeDate}
+            onChange={setValueDate}
             value={date}
             name="date"
           ></input>
@@ -111,8 +111,8 @@ function SearchForecast(props: SearchForecastProps) {
         <CardList
           cards={props.cards}
           forecast={props.forecast}
-          handleButtonRight={props.handleButtonRight}
-          handleButtonLeft={props.handleButtonLeft}
+          showNextCard={props.showNextCard}
+          showPreviousCard={props.showPreviousCard}
           numberOfInitalCard={props.numberOfInitalCard}
           isLeftButtonEnabled={props.isLeftButtonEnabled}
           isRightButtonEnabled={props.isRightButtonEnabled}

@@ -127,13 +127,13 @@ function App() {
       });
   }
 
-  function handleButtonRight(): void {
+  function showNextCard(): void {
     if (numberOfInitalCard < cardsSevenDays.length - 3) {
       setNumberOfInitalCard(numberOfInitalCard + 1);
     }
   }
 
-  function handleButtonLeft(): void {
+  function showPreviousCard(): void {
     if (numberOfInitalCard !== 0) {
       setNumberOfInitalCard(numberOfInitalCard - 1);
     }
@@ -161,8 +161,8 @@ function App() {
         cardsSevenDays={cardsSevenDays}
         cardDayInPast={cardDayInPast}
         getWeatherForecastOnSevenDays={getWeatherForecastOnSevenDays}
-        handleButtonRight={handleButtonRight}
-        handleButtonLeft={handleButtonLeft}
+        showNextCard={showNextCard}
+        showPreviousCard={showPreviousCard}
         numberOfInitalCard={numberOfInitalCard}
         isLeftButtonEnabled={isLeftButtonEnabled}
         isRightButtonEnabled={isRightButtonEnabled}

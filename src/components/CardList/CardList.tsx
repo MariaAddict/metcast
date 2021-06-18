@@ -5,8 +5,8 @@ import { Cards } from "../../types";
 interface CardListProps {
   cards: Cards;
   forecast: string;
-  handleButtonRight?(): void;
-  handleButtonLeft?(): void;
+  showNextCard?(): void;
+  showPreviousCard?(): void;
   numberOfInitalCard?: number;
   isLeftButtonEnabled?: boolean;
   isRightButtonEnabled?: boolean;
@@ -24,7 +24,7 @@ function CardList(props: CardListProps) {
           className={`card-list-block__button ${
             props.isLeftButtonEnabled ? "" : "card-list-block__button_disabled"
           } card-list-block__button_direction_left`}
-          onClick={props.handleButtonLeft}
+          onClick={props.showPreviousCard}
           disabled={!props.isLeftButtonEnabled}
         ></button>
       )}
@@ -41,7 +41,7 @@ function CardList(props: CardListProps) {
           className={`card-list-block__button ${
             props.isRightButtonEnabled ? "" : "card-list-block__button_disabled"
           } card-list-block__button_direction_right`}
-          onClick={props.handleButtonRight}
+          onClick={props.showNextCard}
           disabled={!props.isRightButtonEnabled}
         ></button>
       )}

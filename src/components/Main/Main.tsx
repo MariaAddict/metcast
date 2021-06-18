@@ -6,8 +6,8 @@ type MainProps = {
   cardsSevenDays: Cards;
   cardDayInPast: Cards;
   getWeatherForecastOnSevenDays(city: string): void;
-  handleButtonRight(): void;
-  handleButtonLeft(): void;
+  showNextCard(): void;
+  showPreviousCard(): void;
   numberOfInitalCard: number;
   isLeftButtonEnabled: boolean;
   isRightButtonEnabled: boolean;
@@ -23,8 +23,8 @@ function Main(props: MainProps) {
         forecast="7days"
         cards={props.cardsSevenDays}
         getWeatherForecastOnSevenDays={props.getWeatherForecastOnSevenDays}
-        handleButtonRight={props.handleButtonRight}
-        handleButtonLeft={props.handleButtonLeft}
+        showNextCard={props.showNextCard}
+        showPreviousCard={props.showPreviousCard}
         numberOfInitalCard={props.numberOfInitalCard}
         isLeftButtonEnabled={props.isLeftButtonEnabled}
         isRightButtonEnabled={props.isRightButtonEnabled}
