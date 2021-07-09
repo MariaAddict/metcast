@@ -3,6 +3,7 @@
   "name": "RWeather PWA",
   "lang": "ru",
   "scope": "./",
+  "start_url": "https://mariaaddict.github.io/metcast/",
   "icons": [
     {
       "src": "./icon.png",
@@ -20,7 +21,6 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
   "display": "standalone",
   "theme_color": "#373af5",
   "background_color": "#221f1f"
