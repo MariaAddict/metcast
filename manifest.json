@@ -3,7 +3,7 @@
   "name": "RWeather PWA",
   "lang": "ru",
   "scope": "./",
-  "start_url": "https://mariaaddict.github.io/metcast/",
+  "start_url": ".",
   "icons": [
     {
       "src": "./icon.png",
