@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.cfe48ce6.chunk.css",
-    "main.js": "/static/js/main.88caa0bf.chunk.js",
-    "main.js.map": "/static/js/main.88caa0bf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5c923227.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5c923227.js.map",
-    "static/js/2.08db0d08.chunk.js": "/static/js/2.08db0d08.chunk.js",
-    "static/js/2.08db0d08.chunk.js.map": "/static/js/2.08db0d08.chunk.js.map",
-    "static/js/3.5701672a.chunk.js": "/static/js/3.5701672a.chunk.js",
-    "static/js/3.5701672a.chunk.js.map": "/static/js/3.5701672a.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.cfe48ce6.chunk.css.map": "/static/css/main.cfe48ce6.chunk.css.map",
-    "static/js/2.08db0d08.chunk.js.LICENSE.txt": "/static/js/2.08db0d08.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/Academy-Weather forecast-Bg-up.1b9e0722.png",
-    "static/media/Academy-Weather-bg160.1a743710.svg": "/static/media/Academy-Weather-bg160.1a743710.svg",
-    "static/media/index.css": "/static/media/Ubuntu-Medium.f6a60e5b.ttf",
-    "static/media/CardList.css": "/static/media/chevron-left.668da982.svg"
+    "main.css": "/metcast/static/css/main.bdb75608.chunk.css",
+    "main.js": "/metcast/static/js/main.45903111.chunk.js",
+    "main.js.map": "/metcast/static/js/main.45903111.chunk.js.map",
+    "runtime-main.js": "/metcast/static/js/runtime-main.3249ef6e.js",
+    "runtime-main.js.map": "/metcast/static/js/runtime-main.3249ef6e.js.map",
+    "static/js/2.08db0d08.chunk.js": "/metcast/static/js/2.08db0d08.chunk.js",
+    "static/js/2.08db0d08.chunk.js.map": "/metcast/static/js/2.08db0d08.chunk.js.map",
+    "static/js/3.5701672a.chunk.js": "/metcast/static/js/3.5701672a.chunk.js",
+    "static/js/3.5701672a.chunk.js.map": "/metcast/static/js/3.5701672a.chunk.js.map",
+    "index.html": "/metcast/index.html",
+    "static/css/main.bdb75608.chunk.css.map": "/metcast/static/css/main.bdb75608.chunk.css.map",
+    "static/js/2.08db0d08.chunk.js.LICENSE.txt": "/metcast/static/js/2.08db0d08.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/metcast/static/media/Academy-Weather forecast-Bg-up.1b9e0722.png",
+    "static/media/Academy-Weather-bg160.1a743710.svg": "/metcast/static/media/Academy-Weather-bg160.1a743710.svg",
+    "static/media/index.css": "/metcast/static/media/Ubuntu-Medium.f6a60e5b.ttf",
+    "static/media/CardList.css": "/metcast/static/media/chevron-left.668da982.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5c923227.js",
+    "static/js/runtime-main.3249ef6e.js",
     "static/js/2.08db0d08.chunk.js",
-    "static/css/main.cfe48ce6.chunk.css",
-    "static/js/main.88caa0bf.chunk.js"
+    "static/css/main.bdb75608.chunk.css",
+    "static/js/main.45903111.chunk.js"
   ]
 }
